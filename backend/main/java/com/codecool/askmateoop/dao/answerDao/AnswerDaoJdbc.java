@@ -118,6 +118,7 @@ public class AnswerDaoJdbc implements AnswerDAO {
                 conn.prepareStatement(
                 sql)) {
             statement.setInt(1, id);
+            System.out.println("ez az:" + statement);
             statement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
